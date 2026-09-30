@@ -114,13 +114,62 @@
           <div class="section-tag">Featured Work</div>
           <h2>Things I've built</h2>
         </div>
-        <div class="section-count">01 — 06</div>
+        <div class="section-count">01 — 07</div>
       </div>
 
-      <div class="projects-grid">
+      <!-- Project Filter Tabs -->
+      <div class="filter-wrapper reveal reveal-delay-1">
+        <div class="filter-tabs" id="project-filters" role="tablist">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All <span>7</span></button>
+          <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI &amp; ML <span>3</span></button>
+          <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile &amp; App <span>2</span></button>
+          <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full-Stack &amp; Backend <span>3</span></button>
+          <button class="filter-btn" data-filter="tools" role="tab" aria-selected="false">Tools &amp; Extensions <span>3</span></button>
+        </div>
+      </div>
 
-        <!-- 1. ReeTCode -->
-        <div class="project-card reveal reveal-delay-1" id="project-reetcode">
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- 1. NextMove (New Featured AI Project) -->
+        <div class="project-card reveal reveal-delay-1" id="project-nextmove" data-category="ai fullstack">
+          <div class="card-header">
+            <div class="card-icon g-nextmove">♟️</div>
+            <div class="card-header-text">
+              <div class="badge-row">
+                <h3>NextMove</h3>
+                <span class="featured-badge">Featured AI</span>
+              </div>
+              <span class="card-subtitle">AI Chess Coach &amp; Computer Vision Engine</span>
+            </div>
+          </div>
+          <p class="desc">
+            An intelligent chess coach and vision engine built with FastAPI, OpenCV, and Stockfish 16. Upload board photos for perspective-corrected 13-class ONNX square recognition, deep move evaluation, blunder detection, LangGraph multi-node agent orchestration, and FastMCP server tooling.
+          </p>
+          <div class="feature-chips">
+            <span class="feature-chip">OpenCV + ONNX</span>
+            <span class="feature-chip">Stockfish 16 (UCI)</span>
+            <span class="feature-chip">LangGraph Multi-Node</span>
+            <span class="feature-chip">FastMCP (7 Tools)</span>
+            <span class="feature-chip">ChromaDB RAG</span>
+            <span class="feature-chip">57/57 Pytests ✓</span>
+          </div>
+          <div class="tag-row">
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">LangGraph</span>
+          </div>
+          <div class="card-footer">
+            <div class="card-actions">
+              <a class="view-link" href="https://github.com/prince-721/next-move" target="_blank" rel="noopener">View repository →</a>
+            </div>
+            <span class="lang"><span class="lang-dot python"></span>Python / AI</span>
+          </div>
+        </div>
+
+        <!-- 2. ReeTCode -->
+        <div class="project-card reveal reveal-delay-2" id="project-reetcode" data-category="mobile">
           <div class="card-header">
             <div class="card-icon g-reet">📵</div>
             <div class="card-header-text">
@@ -150,8 +199,8 @@
           </div>
         </div>
 
-        <!-- 2. Context Optimizer -->
-        <div class="project-card reveal reveal-delay-2" id="project-context-optimizer">
+        <!-- 3. Context Optimizer -->
+        <div class="project-card reveal reveal-delay-2" id="project-context-optimizer" data-category="ai tools">
           <div class="card-header">
             <div class="card-icon g-ctx">🧠</div>
             <div class="card-header-text">
@@ -181,8 +230,8 @@
           </div>
         </div>
 
-        <!-- 3. HackWithBug -->
-        <div class="project-card reveal reveal-delay-1" id="project-hackwithbug">
+        <!-- 4. HackWithBug -->
+        <div class="project-card reveal reveal-delay-1" id="project-hackwithbug" data-category="ai fullstack">
           <div class="card-header">
             <div class="card-icon g-hack">🏆</div>
             <div class="card-header-text">
@@ -216,19 +265,23 @@
           </div>
         </div>
 
-        <!-- 4. PrivacyShield -->
-        <div class="project-card reveal reveal-delay-2" id="project-privacyshield">
+        <!-- 5. BlurShield (PrivacyShield) -->
+        <div class="project-card reveal reveal-delay-2" id="project-privacyshield" data-category="tools">
           <div class="card-header">
             <div class="card-icon g-privacy">🛡️</div>
             <div class="card-header-text">
-              <h3>PrivacyShield</h3>
-              <span class="card-subtitle">Chrome Extension · Privacy Tool</span>
+              <div class="badge-row">
+                <h3>BlurShield</h3>
+                <span class="amo-badge">🦊 Mozilla Add-ons Approved</span>
+              </div>
+              <span class="card-subtitle">Browser Extension · Privacy &amp; Content Obfuscation</span>
             </div>
           </div>
           <p class="desc">
-            Auto-blurs sensitive on-screen content — chats, AI prompts, code, docs, images — and reveals it only your way (hover, click, hold Alt/Space, or timed peek). Supports 20+ sites with per-site profiles. Runs 100% locally with zero data collection.
+            An officially approved browser extension that auto-blurs sensitive on-screen content — chats, AI prompts, code, docs, and images — revealing it only your way (hover, click, hold Alt/Space, or timed peek). Supports 20+ sites with per-site profiles. Runs 100% locally with zero data collection.
           </p>
           <div class="feature-chips">
+            <span class="feature-chip">Mozilla AMO Approved (v1.0.0)</span>
             <span class="feature-chip">6 Blur Levels</span>
             <span class="feature-chip">5 Reveal Modes</span>
             <span class="feature-chip">Panic Button</span>
@@ -237,18 +290,22 @@
           <div class="tag-row">
             <span class="tag">JavaScript</span>
             <span class="tag">Manifest V3</span>
+            <span class="tag">Firefox Add-on</span>
             <span class="tag">Chrome Extension</span>
           </div>
           <div class="card-footer">
             <div class="card-actions">
-              <a class="view-link" href="https://github.com/prince-721/privacyShield" target="_blank" rel="noopener">View repository →</a>
+              <a class="btn-card-amo" href="https://addons.mozilla.org/addon/blurshield-privacy/" target="_blank" rel="noopener">
+                <span class="live-indicator-amo"></span> Mozilla Add-ons ↗
+              </a>
+              <a class="view-link" href="https://github.com/prince-721/privacyShield" target="_blank" rel="noopener">GitHub →</a>
             </div>
             <span class="lang"><span class="lang-dot javascript"></span>JavaScript</span>
           </div>
         </div>
 
-        <!-- 5. Wellness Tracking System -->
-        <div class="project-card reveal reveal-delay-1" id="project-wellness">
+        <!-- 6. Wellness Tracking System -->
+        <div class="project-card reveal reveal-delay-1" id="project-wellness" data-category="mobile fullstack">
           <div class="card-header">
             <div class="card-icon g-wellness">🌿</div>
             <div class="card-header-text">
@@ -278,8 +335,8 @@
           </div>
         </div>
 
-        <!-- 6. YouTube Auto Queue Player -->
-        <div class="project-card reveal reveal-delay-2" id="project-ytqueue">
+        <!-- 7. YouTube Auto Queue Player -->
+        <div class="project-card reveal reveal-delay-2" id="project-ytqueue" data-category="tools">
           <div class="card-header">
             <div class="card-icon g-yt">▶</div>
             <div class="card-header-text">
@@ -465,28 +522,32 @@
         <div class="stack-category reveal">
           <h3>Frameworks &amp; Mobile</h3>
           <div class="stack-grid">
+            <div class="stack-item"><span class="stack-icon">⚡</span><span class="stack-name">FastAPI</span></div>
+            <div class="stack-item"><span class="stack-icon">📱</span><span class="stack-name">React Native</span></div>
+            <div class="stack-item"><span class="stack-icon">🎨</span><span class="stack-name">Jetpack Compose</span></div>
             <div class="stack-item"><span class="stack-icon">⚛️</span><span class="stack-name">React</span></div>
             <div class="stack-item"><span class="stack-icon">▲</span><span class="stack-name">Next.js</span></div>
             <div class="stack-item"><span class="stack-icon">🟢</span><span class="stack-name">Node.js</span></div>
             <div class="stack-item"><span class="stack-icon">⚡</span><span class="stack-name">Express.js</span></div>
-            <div class="stack-item"><span class="stack-icon">📱</span><span class="stack-name">React Native</span></div>
-            <div class="stack-item"><span class="stack-icon">🎨</span><span class="stack-name">Jetpack Compose</span></div>
             <div class="stack-item"><span class="stack-icon">🏛️</span><span class="stack-name">Room DB</span></div>
-            <div class="stack-item"><span class="stack-icon">📦</span><span class="stack-name">DataStore</span></div>
           </div>
         </div>
 
         <div class="stack-category reveal">
-          <h3>AI, Data Science &amp; Backend</h3>
+          <h3>AI, Computer Vision &amp; Backend</h3>
           <div class="stack-grid">
+            <div class="stack-item"><span class="stack-icon">👁️</span><span class="stack-name">OpenCV</span></div>
+            <div class="stack-item"><span class="stack-icon">🦜</span><span class="stack-name">LangGraph</span></div>
+            <div class="stack-item"><span class="stack-icon">♟️</span><span class="stack-name">Stockfish UCI</span></div>
+            <div class="stack-item"><span class="stack-icon">🔌</span><span class="stack-name">FastMCP Tools</span></div>
+            <div class="stack-item"><span class="stack-icon">📚</span><span class="stack-name">ChromaDB / RAG</span></div>
             <div class="stack-item"><span class="stack-icon">🤖</span><span class="stack-name">Prompt Eng.</span></div>
             <div class="stack-item"><span class="stack-icon">💬</span><span class="stack-name">NLP / LLMs</span></div>
-            <div class="stack-item"><span class="stack-icon">🐼</span><span class="stack-name">pandas</span></div>
-            <div class="stack-item"><span class="stack-icon">🔢</span><span class="stack-name">NumPy</span></div>
-            <div class="stack-item"><span class="stack-icon">📊</span><span class="stack-name">Matplotlib</span></div>
-            <div class="stack-item"><span class="stack-icon">🌲</span><span class="stack-name">Scikit-Learn</span></div>
             <div class="stack-item"><span class="stack-icon">🍃</span><span class="stack-name">MongoDB</span></div>
             <div class="stack-item"><span class="stack-icon">🐘</span><span class="stack-name">PostgreSQL</span></div>
+            <div class="stack-item"><span class="stack-icon">🐼</span><span class="stack-name">pandas</span></div>
+            <div class="stack-item"><span class="stack-icon">🔢</span><span class="stack-name">NumPy</span></div>
+            <div class="stack-item"><span class="stack-icon">🌲</span><span class="stack-name">Scikit-Learn</span></div>
           </div>
         </div>
 
@@ -568,18 +629,15 @@
           <p>
             I like projects that start from a <strong>real annoyance</strong> — forgetting to drink water,
             losing track of a watchlist, scrolling reels for hours without realizing it, retyping a song
-            queue by hand — and end as a small tool that just handles it.
+            queue by hand, or analyzing a complex chess position from a photo — and end as a small, reliable tool that just handles it.
           </p>
           <p>
-            That's meant working across a variety of stacks: <strong>React Native, Node.js &amp; Express</strong> for
-            health systems, <strong>Kotlin with Jetpack Compose &amp; MVVM</strong> for Android background services,
-            and <strong>plain JavaScript</strong> for high-performance Chrome extensions. Most recently I've been building with
-            <strong>AI in the loop</strong> (Groq API, prompt engineering, and context compression) to supercharge developer workflows.
+            That's meant working across diverse high-impact stacks: <strong>Kotlin, Jetpack Compose &amp; MVVM</strong> for Android background services, <strong>Python, FastAPI &amp; OpenCV</strong> for Computer Vision and AI reasoning engines, <strong>React Native, Node.js &amp; Express</strong> for full-stack health systems, and <strong>plain JavaScript</strong> for high-performance browser extensions.
           </p>
           <p>
             I believe the best software is the kind that <strong>quietly works</strong> in the background —
             tracking, organizing, or automating something people already do — then gets out of the way.
-            I'm currently seeking internships and full-time opportunities where I can solve high-impact engineering problems.
+            I'm currently seeking internships and full-time opportunities where I can build scalable systems and solve tough engineering challenges.
           </p>
         </div>
 
@@ -604,21 +662,30 @@
               <div class="info-icon">📞</div>
               <div class="info-text">
                 <strong>Phone</strong>
-                <a href="tel:+918102556458" style="color:var(--accent-indigo);">+91 8102556458</a>
+                <div class="copyable-row">
+                  <a href="tel:+918102556458" style="color:var(--accent-indigo);">+91 8102556458</a>
+                  <button class="copy-btn" data-copy="+918102556458" title="Copy Phone" aria-label="Copy phone number">📋</button>
+                </div>
               </div>
             </div>
             <div class="info-item">
               <div class="info-icon">✉️</div>
               <div class="info-text">
-                <strong>Email</strong>
-                <a href="mailto:princekumarsingh7214@gmail.com" style="color:var(--accent-indigo);">princekumarsingh7214@gmail.com</a>
+                <strong>Personal Email</strong>
+                <div class="copyable-row">
+                  <a href="mailto:princekumarsingh7214@gmail.com" style="color:var(--accent-indigo);">princekumarsingh7214@gmail.com</a>
+                  <button class="copy-btn" data-copy="princekumarsingh7214@gmail.com" title="Copy Email" aria-label="Copy personal email">📋</button>
+                </div>
               </div>
             </div>
             <div class="info-item">
               <div class="info-icon">🏛️</div>
               <div class="info-text">
                 <strong>College Email</strong>
-                <a href="mailto:2303051050596@paruluniversity.ac.in" style="color:var(--accent-indigo);">2303051050596@paruluniversity.ac.in</a>
+                <div class="copyable-row">
+                  <a href="mailto:2303051050596@paruluniversity.ac.in" style="color:var(--accent-indigo);">2303051050596@paruluniversity.ac.in</a>
+                  <button class="copy-btn" data-copy="2303051050596@paruluniversity.ac.in" title="Copy College Email" aria-label="Copy college email">📋</button>
+                </div>
               </div>
             </div>
             <div class="info-item">
@@ -679,17 +746,24 @@
         </div>
 
         <div class="contact-emails">
-          <a class="email-pill" href="mailto:princekumarsingh7214@gmail.com">
-            <span class="pill-tag">Personal</span> princekumarsingh7214@gmail.com
-          </a>
-          <a class="email-pill" href="mailto:2303051050596@paruluniversity.ac.in">
-            <span class="pill-tag">College</span> 2303051050596@paruluniversity.ac.in
-          </a>
+          <div class="email-pill">
+            <span class="pill-tag">Personal</span>
+            <a href="mailto:princekumarsingh7214@gmail.com">princekumarsingh7214@gmail.com</a>
+            <button class="copy-pill-btn" data-copy="princekumarsingh7214@gmail.com" title="Copy" aria-label="Copy personal email">📋</button>
+          </div>
+          <div class="email-pill">
+            <span class="pill-tag">College</span>
+            <a href="mailto:2303051050596@paruluniversity.ac.in">2303051050596@paruluniversity.ac.in</a>
+            <button class="copy-pill-btn" data-copy="2303051050596@paruluniversity.ac.in" title="Copy" aria-label="Copy college email">📋</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </main>
+
+<!-- ═══════════ Toast Notification ═══════════ -->
+<div class="toast-notification" id="toast">Copied to clipboard! ✓</div>
 
 <!-- ═══════════ Footer ═══════════ -->
 <footer>
